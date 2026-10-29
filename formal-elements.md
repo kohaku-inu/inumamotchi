@@ -229,6 +229,11 @@ Because the game cannot be failed permanently, outcomes are graded by **how much
 Searches on Google Play and the wider web for **"tamagotchi-like games"** return titles that almost universally keep the player in the caretaker-of-a-creature role. A separate search for **"dog taking care of owner game"** returns only variations on *taking care of a dog* — the inverse framing does not appear to exist as a shipped commercial product.
 
 Existing comparators — *Pou*, *My Forever Tamagotchi*, *Nintendogs*, *Neopets* — differ from Inumamotchi principally by swapping which creature is being cared for, while retaining the same direction of care.
+<p>
+   <img width=20% height=20% alt="Screenshot_2026-10-29-23-43-45-36_b5a5c5cb02ca09c784c5d88160e2ec24" src="https://github.com/user-attachments/assets/ef79a476-1db0-4ac0-b283-a887c2e2f8ab" />
+   <img width=20% height=20% alt="Screenshot_2026-10-29-23-44-07-51_b5a5c5cb02ca09c784c5d88160e2ec24" src="https://github.com/user-attachments/assets/528e2517-5f42-443f-9304-3d78b56bc40d" />
+   <img width=20% height=20% alt="Screenshot_2026-10-29-23-43-53-32_b5a5c5cb02ca09c784c5d88160e2ec24" src="https://github.com/user-attachments/assets/72931904-3e44-444a-b9e2-a617a5734ea7" />
+</p>   
 
 **Inumamotchi's distinction is the reversal itself:** the player is the animal, the dependent is the human, and the interface is the dog's perception rather than a management dashboard. Layered onto that is a witty tone, an implicit story running quietly in the background, and a unique safety mechanic where love is never the wrong answer.
 
