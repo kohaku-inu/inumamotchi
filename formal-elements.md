@@ -4,6 +4,8 @@
 *Every good boy knows how to take care of his human!*
 
 ---
+<img width="1670" height="941" alt="Cosy Cottage Companions" src="https://github.com/user-attachments/assets/fa231f8d-f425-480e-87a5-6b9abd0a4fd0" />
+
 
 ## 1. Description
 
@@ -12,6 +14,7 @@
 The game is inspired by the classic **Tamagotchi** (*tamago* "egg" + *uotchi* "watch"), released by Bandai in 1996. Where Tamagotchi asks you to keep a creature alive, Inumamotchi asks you to keep a *person* functioning — filtered entirely through what a dog can perceive, understand, and misunderstand.
 
 Play unfolds across a continuous day cycle of small domestic tasks. The dog's instincts guide the player, the owner's behaviour provides the cues, and the gap between the two produces both the comedy and the emotional weight. There is no villain and no ending: only days, and the slow accumulation of trust.
+
 
 ---
 
