@@ -1,3 +1,4 @@
+
 # Inumamotchi — Level Design: Four Difficulty Levels
 
 ## Overview
@@ -14,7 +15,9 @@ Four levels share one house, one dog and one rule set. They differ in only two t
 
 ## House map and hotspots
 
-Every task in this document hangs on an object already visible in the current background art, so no new rooms are needed.
+Every task in this document hangs on an object already visible in the current background art, so no new rooms are needed.  
+
+<img width="1669" height="942" alt="Bright Noon Storybook House" src="https://github.com/user-attachments/assets/bba324e5-693d-4a12-a036-cb510bc19dd4" />    
 
 | Zone | Objects in the art | Used by |
 | --- | --- | --- |
