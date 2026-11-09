@@ -198,6 +198,7 @@ On a bad day, when the owner does not react, a task escalates through up to thre
 
 **What has no ladder.** Bedtime, the night stops and the low-state events. The night is already the quiet version of the day, and stacking rungs on it would be the death spiral described below.
 
+<img width="1520" height="704" alt="escalation-flow" src="https://github.com/user-attachments/assets/69084f46-190a-40d6-946d-17dc615e45b4" />
 
 
 A hit on the base action ends the task as a Complete. On a good day a miss just re-prompts. On a bad day a miss, or no response to an untimed action, starts the ladder: the dog climbs one rung at a time until it has done the rungs the owner's mood requires, or reached the level's cap. The owner then responds.
@@ -232,7 +233,9 @@ On a bad day the day does not stop at dusk. The same loop keeps running into the
 
 **The owner wanders a fixed route.** The route is dining nook, desk, kitchen, sofa, bed. Each level's night is the tail of the Hard route, so a longer night means the owner makes more stops before bed.
 
-**Light and tone.** Warm pools of light come from the objects already in the art: the nightstand lantern, the kitchen hanging lamp, the TV and the monitor. Colour desaturation stays reserved for breakdown events, so the player can tell a quiet night from a crisis.
+**Light and tone.** Warm pools of light come from the objects already in the art: the nightstand lantern, the kitchen hanging lamp, the TV and the monitor. Colour desaturation stays reserved for breakdown events, so the player can tell a quiet night from a crisis.  
+
+<img width="1520" height="544" alt="night-route" src="https://github.com/user-attachments/assets/d303979a-1033-4114-a0e2-2bbf000cecbc" />
 
 | Night stop | Owner is | Flow (every step after the click is a hold) |
 | --- | --- | --- |
