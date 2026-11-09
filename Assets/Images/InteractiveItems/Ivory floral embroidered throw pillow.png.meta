@@ -1,0 +1,806 @@
+fileFormatVersion: 2
+guid: 676ae3562c28aa64fb6b26b090754688
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3215758440835659217
+    second: Ivory floral embroidered throw pillow_0
+  - first:
+      213: -8563947235771224778
+    second: Ivory floral embroidered throw pillow_1
+  - first:
+      213: -6257492147714183270
+    second: Ivory floral embroidered throw pillow_2
+  - first:
+      213: 1524386385105687173
+    second: Ivory floral embroidered throw pillow_3
+  - first:
+      213: 6127279268645211544
+    second: Ivory floral embroidered throw pillow_4
+  - first:
+      213: 8959089837515226212
+    second: Ivory floral embroidered throw pillow_5
+  - first:
+      213: 8198993415654807142
+    second: Ivory floral embroidered throw pillow_6
+  - first:
+      213: -4975043957907820875
+    second: Ivory floral embroidered throw pillow_7
+  - first:
+      213: -7286035118946961434
+    second: Ivory floral embroidered throw pillow_8
+  - first:
+      213: 6410875262688815489
+    second: Ivory floral embroidered throw pillow_9
+  - first:
+      213: -2786563579853419513
+    second: Ivory floral embroidered throw pillow_10
+  - first:
+      213: -1268863326476696028
+    second: Ivory floral embroidered throw pillow_11
+  - first:
+      213: 5446237032377916549
+    second: Ivory floral embroidered throw pillow_12
+  - first:
+      213: 288252580870781939
+    second: Ivory floral embroidered throw pillow_13
+  - first:
+      213: -4612034712275628317
+    second: Ivory floral embroidered throw pillow_14
+  - first:
+      213: -5841234053158966946
+    second: Ivory floral embroidered throw pillow_15
+  - first:
+      213: -4283912105966593978
+    second: Ivory floral embroidered throw pillow_16
+  - first:
+      213: 3529993550214122941
+    second: Ivory floral embroidered throw pillow_17
+  - first:
+      213: 6762539510572276130
+    second: Ivory floral embroidered throw pillow_18
+  - first:
+      213: 5817926794488895235
+    second: Ivory floral embroidered throw pillow_19
+  - first:
+      213: 9121956922778982775
+    second: Ivory floral embroidered throw pillow_20
+  - first:
+      213: 7882532716377135765
+    second: Ivory floral embroidered throw pillow_21
+  - first:
+      213: -4279879753895921050
+    second: Ivory floral embroidered throw pillow_22
+  - first:
+      213: 3274016084537515803
+    second: Ivory floral embroidered throw pillow_23
+  - first:
+      213: 6443192282367419163
+    second: Ivory floral embroidered throw pillow_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1357
+        height: 1078
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d5397d934ba0ac20800000000000000
+      internalID: 3215758440835659217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_1
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 1073
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63deaa0ec5fb62980800000000000000
+      internalID: -8563947235771224778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_2
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 1045
+        width: 68
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9f23b69b0ce829a0800000000000000
+      internalID: -6257492147714183270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_3
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 969
+        width: 52
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5829aa83755b72510800000000000000
+      internalID: 1524386385105687173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_4
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 633
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89d8637f708780550800000000000000
+      internalID: 6127279268645211544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_5
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 626
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46c38eb6db4155c70800000000000000
+      internalID: 8959089837515226212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_6
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 637
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6661fd7421da8c170800000000000000
+      internalID: 8198993415654807142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_7
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 696
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5be63f211e715fab0800000000000000
+      internalID: -4975043957907820875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_8
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 659
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e7352299adc2ea90800000000000000
+      internalID: -7286035118946961434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_9
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 623
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 189e7ebc51108f850800000000000000
+      internalID: 6410875262688815489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_10
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 817
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70ccbce10332459d0800000000000000
+      internalID: -2786563579853419513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_11
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 810
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42606dcf687146ee0800000000000000
+      internalID: -1268863326476696028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_12
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 783
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58c967db9bbe49b40800000000000000
+      internalID: 5446237032377916549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_13
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 807
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fb7460f134100400800000000000000
+      internalID: 288252580870781939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_14
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 625
+        width: 104
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ee4a036dd2ceffb0800000000000000
+      internalID: -4612034712275628317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_15
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 589
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e596b8ba394cfeea0800000000000000
+      internalID: -5841234053158966946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_16
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 601
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6489dd203ac7c84c0800000000000000
+      internalID: -4283912105966593978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_17
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 574
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbdcee36e6e0df030800000000000000
+      internalID: 3529993550214122941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_18
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 517
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a9543bfadd59dd50800000000000000
+      internalID: 6762539510572276130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_19
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 319
+        width: 88
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 307dcba489d6db050800000000000000
+      internalID: 5817926794488895235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_20
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 250
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77918a6bd73b79e70800000000000000
+      internalID: 9121956922778982775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_21
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 114
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59add0afdb1646d60800000000000000
+      internalID: 7882532716377135765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_22
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 114
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66ab5a32a00da94c0800000000000000
+      internalID: -4279879753895921050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_23
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 114
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1f16cb4844af6d20800000000000000
+      internalID: 3274016084537515803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivory floral embroidered throw pillow_24
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 72
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b136c0a4e31da6950800000000000000
+      internalID: 6443192282367419163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ivory floral embroidered throw pillow_0: 3215758440835659217
+      Ivory floral embroidered throw pillow_1: -8563947235771224778
+      Ivory floral embroidered throw pillow_10: -2786563579853419513
+      Ivory floral embroidered throw pillow_11: -1268863326476696028
+      Ivory floral embroidered throw pillow_12: 5446237032377916549
+      Ivory floral embroidered throw pillow_13: 288252580870781939
+      Ivory floral embroidered throw pillow_14: -4612034712275628317
+      Ivory floral embroidered throw pillow_15: -5841234053158966946
+      Ivory floral embroidered throw pillow_16: -4283912105966593978
+      Ivory floral embroidered throw pillow_17: 3529993550214122941
+      Ivory floral embroidered throw pillow_18: 6762539510572276130
+      Ivory floral embroidered throw pillow_19: 5817926794488895235
+      Ivory floral embroidered throw pillow_2: -6257492147714183270
+      Ivory floral embroidered throw pillow_20: 9121956922778982775
+      Ivory floral embroidered throw pillow_21: 7882532716377135765
+      Ivory floral embroidered throw pillow_22: -4279879753895921050
+      Ivory floral embroidered throw pillow_23: 3274016084537515803
+      Ivory floral embroidered throw pillow_24: 6443192282367419163
+      Ivory floral embroidered throw pillow_3: 1524386385105687173
+      Ivory floral embroidered throw pillow_4: 6127279268645211544
+      Ivory floral embroidered throw pillow_5: 8959089837515226212
+      Ivory floral embroidered throw pillow_6: 8198993415654807142
+      Ivory floral embroidered throw pillow_7: -4975043957907820875
+      Ivory floral embroidered throw pillow_8: -7286035118946961434
+      Ivory floral embroidered throw pillow_9: 6410875262688815489
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
