@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public enum DogState  { Idle, Walking, Acting }
+public enum DogState { Idle, Walking, Acting }
 public enum DogAction { Jump, Nudge, Bark, Sit, Lie }
 
 /// The dog character: walks to points and performs actions.
@@ -67,10 +67,10 @@ public class DogController : MonoBehaviour
 
         switch (action)
         {
-            case DogAction.Jump: yield return Hop(0.6f, 0.4f);     break;
-            case DogAction.Sit:  yield return Squash(0.7f, 0.8f);  break;
-            case DogAction.Lie:  yield return Squash(0.5f, 1.2f);  break;
-            default:             yield return Wiggle(0.6f);        break;   // Nudge, Bark
+            case DogAction.Jump: yield return Hop(0.6f, 0.4f); break;
+            case DogAction.Sit: yield return Squash(0.7f, 0.8f); break;
+            case DogAction.Lie: yield return Squash(0.5f, 1.2f); break;
+            default: yield return Wiggle(0.6f); break;   // Nudge, Bark
         }
 
         State = DogState.Idle;

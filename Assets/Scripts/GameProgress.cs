@@ -13,7 +13,7 @@ public class GameProgress : ScriptableObject
     public int Trust => trust;
 
     public void AddTrust(int amount) { trust += amount; }
-    public void CompleteDay()        { daysCompleted++; }
+    public void CompleteDay() { daysCompleted++; }
 
     // Right-click the asset's component header in the Inspector -> "Reset values"
     [ContextMenu("Reset values")]
