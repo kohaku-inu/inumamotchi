@@ -15,6 +15,9 @@ public class DogController : MonoBehaviour
 
     public DogState State { get; private set; } = DogState.Idle;
 
+    /// Where the dog is currently heading (used by hotspots to tell "arrived" from "just passing").
+    public Vector2 MoveTarget { get; private set; }
+
     private Coroutine moveRoutine;
 
     // ---------- Movement ----------
@@ -23,6 +26,8 @@ public class DogController : MonoBehaviour
     {
         if (State == DogState.Acting) return;                  // busy: ignore
         if (moveRoutine != null) StopCoroutine(moveRoutine);   // player changed their mind
+
+        MoveTarget = target;
         moveRoutine = StartCoroutine(MoveRoutine(target, onArrived));
     }
 

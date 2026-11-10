@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 261995379}
   - component: {fileID: 261995378}
-  - component: {fileID: 261995377}
+  - component: {fileID: 261995380}
   m_Layer: 0
   m_Name: HotspotDoor
   m_TagString: Untagged
@@ -137,19 +137,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &261995377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 261995376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3205e8edbee81b4429e574b4be49ac5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Hotspot
-  standPoint: {fileID: 1958257093}
 --- !u!61 &261995378
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -212,6 +199,20 @@ Transform:
   - {fileID: 1958257093}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &261995380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261995376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63aa3d68b434204585e6aef1fd7bf36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Hotspot
+  standPoint: {fileID: 1958257093}
+  alreadyHereDistance: 0.15
 --- !u!1 &408691969
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +437,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 545529992}
+  - component: {fileID: 545529994}
+  - component: {fileID: 545529993}
   m_Layer: 0
   m_Name: StandPoint
   m_TagString: Untagged
@@ -458,6 +461,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1174387212}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &545529993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545529991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e1cd6fdf6628364f9513ad694631b62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StandZone
+--- !u!58 &545529994
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545529991}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,7 +624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HotspotTask
   dog: {fileID: 779777156}
   input: {fileID: 1299629331}
-  hotspot: {fileID: 261995377}
+  hotspot: {fileID: 261995380}
   action: 1
   scent: {fileID: 0}
   progress: {fileID: 11400000, guid: 816d4a78e977c584ebdee6157c92efd5, type: 2}
@@ -603,6 +654,8 @@ GameObject:
   m_Component:
   - component: {fileID: 779777157}
   - component: {fileID: 779777156}
+  - component: {fileID: 779777159}
+  - component: {fileID: 779777158}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Untagged
@@ -619,11 +672,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 779777155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b071cf8e1e4b4b74891881c274edb6aa, type: 3}
+  m_Script: {fileID: 11500000, guid: fbae4c917c3a2fd4e89446c3fc66d29d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DogController
   speed: 3
-  body: {fileID: 1004669852}
+  body: {fileID: 0}
 --- !u!4 &779777157
 Transform:
   m_ObjectHideFlags: 0
@@ -640,6 +693,69 @@ Transform:
   - {fileID: 1004669853}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &779777158
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779777155}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
+--- !u!50 &779777159
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779777155}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &997711071
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,9 +787,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HotspotTask
   dog: {fileID: 779777156}
   input: {fileID: 1299629331}
-  hotspot: {fileID: 1174387210}
+  hotspot: {fileID: 1174387213}
   action: 1
-  scent: {fileID: 0}
+  scent: {fileID: 1189218488}
   progress: {fileID: 11400000, guid: 816d4a78e977c584ebdee6157c92efd5, type: 2}
   trustReward: 1
 --- !u!4 &997711073
@@ -847,7 +963,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1174387212}
   - component: {fileID: 1174387211}
-  - component: {fileID: 1174387210}
+  - component: {fileID: 1174387213}
   m_Layer: 0
   m_Name: HotspotBowl
   m_TagString: Untagged
@@ -855,19 +971,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1174387210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1174387209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3205e8edbee81b4429e574b4be49ac5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Hotspot
-  standPoint: {fileID: 545529992}
 --- !u!61 &1174387211
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -930,6 +1033,67 @@ Transform:
   - {fileID: 545529992}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1174387213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174387209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63aa3d68b434204585e6aef1fd7bf36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Hotspot
+  standPoint: {fileID: 545529992}
+  alreadyHereDistance: 0.15
+--- !u!1 &1189218487
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1189218489}
+  - component: {fileID: 1189218488}
+  m_Layer: 0
+  m_Name: ScentBreakfast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1189218488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189218487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f12659a8b1a674bb5995927764ea34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScentEmitter
+  wispPrefab: {fileID: 6427109028664106301, guid: 57f8a6ed60184f74b8c062ba7b51d156, type: 3}
+  target: {fileID: 1174387212}
+  interval: 0.4
+--- !u!4 &1189218489
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189218487}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.18, y: 2.18, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1266039204
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,7 +1125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HotspotTask
   dog: {fileID: 779777156}
   input: {fileID: 1299629331}
-  hotspot: {fileID: 1427971895}
+  hotspot: {fileID: 1427971898}
   action: 4
   scent: {fileID: 0}
   progress: {fileID: 11400000, guid: 816d4a78e977c584ebdee6157c92efd5, type: 2}
@@ -1039,7 +1203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1427971897}
   - component: {fileID: 1427971896}
-  - component: {fileID: 1427971895}
+  - component: {fileID: 1427971898}
   m_Layer: 0
   m_Name: HotspotBed
   m_TagString: Untagged
@@ -1047,19 +1211,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1427971895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427971894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3205e8edbee81b4429e574b4be49ac5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Hotspot
-  standPoint: {fileID: 1944085982}
 --- !u!61 &1427971896
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1122,6 +1273,20 @@ Transform:
   - {fileID: 1944085982}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1427971898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427971894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63aa3d68b434204585e6aef1fd7bf36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Hotspot
+  standPoint: {fileID: 1944085982}
+  alreadyHereDistance: 0.15
 --- !u!1 &1632242733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,7 +1297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1632242736}
   - component: {fileID: 1632242735}
-  - component: {fileID: 1632242734}
+  - component: {fileID: 1632242737}
   m_Layer: 0
   m_Name: HotspotOwner
   m_TagString: Untagged
@@ -1140,19 +1305,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1632242734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1632242733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3205e8edbee81b4429e574b4be49ac5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Hotspot
-  standPoint: {fileID: 1958396909}
 --- !u!61 &1632242735
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1215,6 +1367,20 @@ Transform:
   - {fileID: 1958396909}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1632242737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632242733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63aa3d68b434204585e6aef1fd7bf36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Hotspot
+  standPoint: {fileID: 1958396909}
+  alreadyHereDistance: 0.15
 --- !u!1 &1944085981
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,6 +1390,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1944085982}
+  - component: {fileID: 1944085984}
+  - component: {fileID: 1944085983}
   m_Layer: 0
   m_Name: StandPoint
   m_TagString: Untagged
@@ -1246,6 +1414,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1427971897}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1944085983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944085981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e1cd6fdf6628364f9513ad694631b62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StandZone
+--- !u!58 &1944085984
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944085981}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.1
 --- !u!1 &1958257092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,6 +1471,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1958257093}
+  - component: {fileID: 1958257095}
+  - component: {fileID: 1958257094}
   m_Layer: 0
   m_Name: StandPoint
   m_TagString: Untagged
@@ -1277,6 +1495,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 261995379}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1958257094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958257092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e1cd6fdf6628364f9513ad694631b62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StandZone
+--- !u!58 &1958257095
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958257092}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.1
 --- !u!1 &1958396908
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,6 +1552,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1958396909}
+  - component: {fileID: 1958396911}
+  - component: {fileID: 1958396910}
   m_Layer: 0
   m_Name: StandPoint
   m_TagString: Untagged
@@ -1308,6 +1576,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1632242736}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1958396910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958396908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e1cd6fdf6628364f9513ad694631b62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StandZone
+--- !u!58 &1958396911
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958396908}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.1
 --- !u!1 &1982165830
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,7 +1655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HotspotTask
   dog: {fileID: 779777156}
   input: {fileID: 1299629331}
-  hotspot: {fileID: 1632242734}
+  hotspot: {fileID: 1632242737}
   action: 0
   scent: {fileID: 0}
   progress: {fileID: 11400000, guid: 816d4a78e977c584ebdee6157c92efd5, type: 2}
@@ -1473,6 +1789,7 @@ SceneRoots:
   - {fileID: 2023327952}
   - {fileID: 779777157}
   - {fileID: 408691971}
+  - {fileID: 1189218489}
   - {fileID: 1632242736}
   - {fileID: 1174387212}
   - {fileID: 261995379}
