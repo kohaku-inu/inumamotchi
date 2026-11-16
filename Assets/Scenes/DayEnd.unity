@@ -1249,6 +1249,7 @@ MonoBehaviour:
   title: {fileID: 1522370575}
   trustText: {fileID: 68727145}
   nextDayScene: Tutorial
+  exitButton: {fileID: 47326072}
   warmVersion: {fileID: 113364348}
   quietVersion: {fileID: 1275924135}
 --- !u!4 &1491361640
