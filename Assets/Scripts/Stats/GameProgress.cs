@@ -16,8 +16,8 @@ public class GameProgress : ScriptableObject
     public DayOutcome LastDayOutcome => lastDayOutcome;
     public event Action<int> TrustChanged;
 
-    public void AddTrust(int amount) 
-    { 
+    public void AddTrust(int amount)
+    {
         trust += amount;
         TrustChanged?.Invoke(trust);
     }
