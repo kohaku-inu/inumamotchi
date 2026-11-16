@@ -12,8 +12,24 @@ public class DayRunner : MonoBehaviour
     [SerializeField] private GameProgress progress;
     [SerializeField] private string nextSceneName = "DayEnd";
 
+    [Header("Listens to")]
+    [SerializeField] private GameEvent dogRested;   // when the dog rests, the current task's moment passes
+
     private int index = -1;
     private int ignoredCount;
+    void OnEnable()
+    {
+        if (dogRested != null) dogRested.Raised += SkipCurrent;
+    }
+
+    void OnDisable()
+    {
+        if (dogRested != null) dogRested.Raised -= SkipCurrent;
+
+        // safety net: if the scene unloads in the middle of a task, stop listening to it
+        if (index >= 0 && index < tasks.Count)
+            tasks[index].Completed -= OnTaskCompleted;
+    }
     void Start()
     {
         Next();
