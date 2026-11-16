@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 /// Values that must survive scene changes, stored in an ASSET (not in a scene object).
@@ -11,8 +12,13 @@ public class GameProgress : ScriptableObject
     // Read-only from outside: other scripts must use the methods below to change values
     public int DaysCompleted => daysCompleted;
     public int Trust => trust;
+    public event Action<int> TrustChanged;
 
-    public void AddTrust(int amount) { trust += amount; }
+    public void AddTrust(int amount) 
+    { 
+        trust += amount;
+        TrustChanged?.Invoke(trust);
+    }
     public void CompleteDay() { daysCompleted++; }
 
     // Right-click the asset's component header in the Inspector -> "Reset values"
@@ -21,5 +27,6 @@ public class GameProgress : ScriptableObject
     {
         daysCompleted = 0;
         trust = 0;
+        TrustChanged?.Invoke(trust);
     }
 }

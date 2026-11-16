@@ -29,16 +29,18 @@ public class ClickInput : MonoBehaviour
         // Ignore clicks that land on UI buttons
         if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject()) return;
 
-        Vector2 world = cam.ScreenToWorldPoint(pointer.position.ReadValue());
+        Vector2 screenPos = pointer.position.ReadValue();
+        Vector2 world = cam.ScreenToWorldPoint(screenPos);
+        Ray ray = cam.ScreenPointToRay(screenPos);
 
-        // Spawn a ripple copy of the prefab where the player tapped
-        if (ripplePrefab != null)
-            Instantiate(ripplePrefab, world, Quaternion.identity);
+        // feedback first : every tap gets a ripple (including hotspot clicks)
+        SpawnRipple(world);
 
         // 1) An active hotspot wins
-        foreach (Collider2D col in Physics2D.OverlapPointAll(world))
+        RaycastHit2D[] hits = Physics2D.GetRayIntersectionAll(ray);
+        foreach (RaycastHit2D hit in hits)
         {
-            if (col.TryGetComponent(out Hotspot hotspot) && hotspot.IsActive)
+            if (hit.collider.TryGetComponent(out Hotspot hotspot) && hotspot.IsActive)
             {
                 hotspot.Interact(dog);
                 return;
@@ -48,5 +50,11 @@ public class ClickInput : MonoBehaviour
         // 2) Otherwise walk there, if it is on the floor
         if (floor != null && floor.OverlapPoint(world))
             dog.MoveTo(world);
+    }
+
+    private void SpawnRipple(Vector2 position)
+    {
+        if (ripplePrefab != null)
+            Instantiate(ripplePrefab, position, Quaternion.identity);
     }
 }
