@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0333f82bcf6cd654c83227a5a5d6628b, type: 3}
   m_Name: GameProgress
   m_EditorClassIdentifier: Assembly-CSharp::GameProgress
-  daysCompleted: 0
-  trust: 0
+  daysCompleted: 1
+  trust: 4

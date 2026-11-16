@@ -13,7 +13,7 @@ public class DayRunner : MonoBehaviour
     [SerializeField] private string nextSceneName = "DayEnd";
 
     private int index = -1;
-
+    private int ignoredCount;
     void Start()
     {
         Next();
@@ -38,7 +38,18 @@ public class DayRunner : MonoBehaviour
         task.Completed -= OnTaskCompleted;
         Next();
     }
+    [ContextMenu("Skip current task")]
+    public void SkipCurrent()
+    {
+        if (index < 0 || index >= tasks.Count) return; // no tasks
 
+        GameTask task = tasks[index];
+        task.Completed -= OnTaskCompleted;  // never complete, 
+        task.Cancel();
+        ignoredCount++;
+        Debug.Log($"Skipped {task.name} (ignored so far: {ignoredCount})");
+        Next();
+    }
     private void FinishDay()
     {
         Debug.Log("Day finished");

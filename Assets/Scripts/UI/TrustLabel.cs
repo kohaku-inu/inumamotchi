@@ -9,7 +9,7 @@ public class TrustLabel : MonoBehaviour
 
     void OnEnable()
     {
-        // game progress manages the subs, shows subscribe to run when trust changed is invoke
+        // game progress manages the subs, show subscribe to run when trust changed is invoked
         progress.TrustChanged += Show;
         Show(progress.Trust);   // the event only fires on change, so show the starting value now
     }

@@ -9,7 +9,7 @@ public abstract class GameTask : MonoBehaviour
 
     /// Each concrete task overrides this with its own flow.
     public abstract void Begin();
-
+    public abstract void Cancel();
     /// Subclasses call this when they are finished.
     protected void Complete()
     {

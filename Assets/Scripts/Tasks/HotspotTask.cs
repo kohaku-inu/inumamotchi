@@ -24,16 +24,22 @@ public class HotspotTask : GameTask
 
         if (scent != null) scent.StartEmitting();
     }
-
+    public override void Cancel()
+    {
+        Cleanup();
+    }
     private void OnArrived(Hotspot arrivedAt)
+    {
+        Cleanup();
+        input.InputLocked = true;            // the world is locked during a task
+        dog.PerformAction(action, OnActionDone);
+    }
+    private void Cleanup()
     {
         hotspot.Activated -= OnArrived;      // unsubscribe: avoid a double fire
         hotspot.SetActive(false);
 
         if (scent != null) scent.StopEmitting();
-
-        input.InputLocked = true;            // the world is locked during a task
-        dog.PerformAction(action, OnActionDone);
     }
 
     private void OnActionDone()
