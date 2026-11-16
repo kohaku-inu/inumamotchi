@@ -11,7 +11,8 @@ public class DayRunner : MonoBehaviour
     [Header("When the day ends")]
     [SerializeField] private GameProgress progress;
     [SerializeField] private string nextSceneName = "DayEnd";
-
+    [Tooltip("This many ignored tasks or more makes the day Quiet")]
+    [SerializeField] private int quietDayThreshold = 2;
     [Header("Listens to")]
     [SerializeField] private GameEvent dogRested;   // when the dog rests, the current task's moment passes
 
@@ -69,10 +70,11 @@ public class DayRunner : MonoBehaviour
     private void FinishDay()
     {
         Debug.Log("Day finished");
+        DayOutcome outcome = ignoredCount >= quietDayThreshold ? DayOutcome.Quiet : DayOutcome.Warm;
+        Debug.Log($"Day outcome: {outcome} (ignored {ignoredCount})");
 
         if (progress != null)
-            progress.CompleteDay();
-
+            progress.CompleteDay(outcome);
         if (!string.IsNullOrEmpty(nextSceneName))
             SceneManager.LoadScene(nextSceneName);   // the scene must be in the Build Profiles scene list
     }

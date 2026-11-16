@@ -10,12 +10,18 @@ public class DayEndScreen : MonoBehaviour
     [SerializeField] private TMP_Text trustText;          // optional: demo line for the assignment
     [SerializeField] private string nextDayScene = "Tutorial";
 
+    [Header("One of these is shown, depending on how the day ended")]
+    [SerializeField] private GameObject warmVersion;     // owner brighter, warm light
+    [SerializeField] private GameObject quietVersion;    // house dim and quiet
+
     void Start()
     {
         title.text = $"Day {progress.DaysCompleted} complete";
 
-        // The concept says no score screen, so this line is only to SHOW the saved value in class.
-        // Leave the slot empty (or delete the text object) to hide it.
+        bool quiet = progress.LastDayOutcome == DayOutcome.Quiet;
+        if (warmVersion != null) warmVersion.SetActive(!quiet);
+        if (quietVersion != null) quietVersion.SetActive(quiet);
+
         if (trustText != null)
             trustText.text = $"Trust: {progress.Trust}";
     }

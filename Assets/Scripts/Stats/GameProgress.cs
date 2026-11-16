@@ -8,10 +8,12 @@ public class GameProgress : ScriptableObject
 {
     [SerializeField] private int daysCompleted;
     [SerializeField] private int trust;
+    [SerializeField] private DayOutcome lastDayOutcome;
 
     // Read-only from outside: other scripts must use the methods below to change values
     public int DaysCompleted => daysCompleted;
     public int Trust => trust;
+    public DayOutcome LastDayOutcome => lastDayOutcome;
     public event Action<int> TrustChanged;
 
     public void AddTrust(int amount) 
@@ -19,7 +21,11 @@ public class GameProgress : ScriptableObject
         trust += amount;
         TrustChanged?.Invoke(trust);
     }
-    public void CompleteDay() { daysCompleted++; }
+    public void CompleteDay(DayOutcome outcome)
+    {
+        daysCompleted++;
+        lastDayOutcome = outcome;
+    }
 
     // Right-click the asset's component header in the Inspector -> "Reset values"
     [ContextMenu("Reset values")]
