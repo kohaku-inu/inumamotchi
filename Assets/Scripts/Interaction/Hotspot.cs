@@ -10,6 +10,7 @@ public class Hotspot : MonoBehaviour
 {
     [SerializeField] private Transform standPoint;              // empty child: where the dog stands
     [SerializeField] private float alreadyHereDistance = 0.15f; // keep about equal to the trigger zone size
+    [SerializeField] private GameObject highlight;              // optional: shown only while this hotspot is active
 
     public event Action<Hotspot> Activated;                     // fired when the dog has ARRIVED
 
@@ -18,7 +19,11 @@ public class Hotspot : MonoBehaviour
     public Vector2 StandPosition =>
         standPoint != null ? (Vector2)standPoint.position : (Vector2)transform.position;
 
-    public void SetActive(bool value) { IsActive = value; }
+    public void SetActive(bool value)
+    {
+        IsActive = value;
+        if (highlight != null) highlight.SetActive(value);
+    }
 
     /// Called by ClickInput when the player clicks this hotspot.
     public void Interact(DogController dog)
