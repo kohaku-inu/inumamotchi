@@ -224,8 +224,28 @@ Data shared across scenes (Trust, day count, the last outcome) lives in the `Gam
 
 ---
 
-## Known limitations
+## AI review: code vs. diagram
 
-- The ball can roll out through the bottom edge of the house (no wall colliders yet).
-- When clickable objects overlap, the click doesn't follow sprite drawing order. Not a problem yet, because only one task hotspot is active at a time.
-- On 16:10 screens the camera crops the mailbox. It's only used in the Hard level.
+The code was checked against the class diagram and events table above by an AI agent (Claude). The differences, the known limitations, and the planned fix for each are below. The fixes are planned for the next iteration.
+
+### Differences from the diagram
+
+| # | Where | Difference | Why it is this way now | Planned fix |
+|---|---|---|---|---|
+| 1 | `HotspotTask`, `RestSpot` → `ClickInput` | Both set `ClickInput.InputLocked` directly to lock the world during an action. This link is not in the diagram. | The simplest way to lock input for a prototype. | Replace the direct calls with two `GameEvent` assets, `ActionStarted` and `ActionEnded`. Tasks raise them, and `ClickInput` listens and locks or unlocks itself. Tasks then no longer need a reference to `ClickInput`. |
+| 2 | `Hotspot`, `StandZone`, `Toy` → `DogController` | `Hotspot` reads the dog's `State` and `MoveTarget` to tell "arrived" from "walking past". `StandZone` and `Toy` recognize the dog by its `DogController` component. Not drawn. | These are checks, not commands, and were left out to keep the diagram readable. | Add these dependencies to the diagram as dotted "reads" arrows. No code change needed. |
+| 3 | `HotspotTask`, `PlayTask` | They subscribe to `Hotspot.Activated` / `Toy.TouchedByDog` in `Begin()` and unsubscribe in `Cleanup()`, not in `OnEnable` / `OnDisable`. | A task should only listen while it is running. | Keep the Begin/Cleanup pattern, and add an `OnDisable` safety net that unsubscribes if the object is disabled mid-task, the same pattern `DayRunner` already uses. |
+| 4 | `GameProgress.ResetAll` | Resets Trust and the day count, but not `LastDayOutcome`. | An oversight found by this review. | Add `lastDayOutcome = DayOutcome.Warm;` to `ResetAll()`. |
+| 5 | Small classes | `ScentEmitter`, `ScentWisp`, `TapRipple`, `FitCameraToBackground` and the `DayOutcome` enum are not in the diagram. | Visual helpers and a value type, left out on purpose. | No change planned. |
+
+### Other findings and known limitations
+
+| Type | Finding | Planned fix |
+|---|---|---|
+| Code quality | `DogController` has two responsibilities: moving the dog and performing actions. | Split it into `DogMover` (walking, `MoveTo`) and `DogActions` (`PerformAction` and the animations). Scripts that use the dog then reference only the part they need. |
+| Code quality | `DogController` has fixed numbers in the code: the arrival distance (`0.05f`) and the placeholder animation sizes and times. | Move the arrival distance to an Inspector field. The animation numbers are removed when the placeholders are replaced by Animator animations. |
+| Project structure | The `Scripts/Owner` and `Scripts/Walk` folders are empty. Git stores their `.meta` files but not the folders. | Delete the empty folders, and create them again when owner and walk code is added. |
+| Project structure | `FitCameraToBackground` sits loose in `Scripts/`. | Move it into a `Camera/` folder. |
+| Known limitation | The ball can roll out through the bottom edge of the house (no wall colliders yet). | Add a solid `EdgeCollider2D` along the house walls, so the ball bounces back. |
+| Known limitation | When clickable objects overlap, the click does not follow sprite drawing order. This is not a problem yet, because only one task hotspot is active at a time. | Sort the raycast hits by sorting layer and order in layer before choosing a hotspot. Needed once several hotspots can be active at the same time. |
+| Known limitation | On 16:10 screens the camera crops the mailbox, which is used only in the Hard level. | Limit how much `FitCameraToBackground` may crop, and fill any remaining edge with a colour from the art instead of the camera's default blue. |
