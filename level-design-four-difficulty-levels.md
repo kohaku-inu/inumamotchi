@@ -188,11 +188,21 @@ Every ignored task feeds Drift: lower owner mood and Appetite the next day, with
 
 ## Escalation ladders
 
-On a bad day, when the owner does not react, a task escalates through up to three rungs, and every ladder ends in a response. Rungs are the only place subtasks exist.
+On a bad day, when the owner does not react, a task escalates through up to three rungs, and every ladder ends in a response. Rungs are the only place subtasks exist.  
 
 **The principle.** Each rung is a different dog behavior aimed at the same goal, never an unrelated chore. They move from a sign (noise or an object), to contact (paw, nudge), to presence (staying close). Rung 3 is always a held Stay: the owner responds on their own time.
 
-**How many rungs fire.** The ladder starts only on a bad day, and only when the player misses the timed press. On a good day a miss just re-prompts. Tasks with no timed press (Breakfast, Walk, Lunch Nudge, Fetch Post, Dinner) start the ladder when the owner does not respond to the first action, so on a bad day they always climb at least one rung. A hit on a bad day still completes the task, with a muted owner reaction. Rungs needed equal the owner's mood band within the bad day: Low 1, Very low 2, Lowest 3. The level's escalation depth caps the result. At the capped rung the owner always responds, so no ladder can dead-end. These bands are placeholders.
+**How many rungs fire.** The ladder starts only on a bad day, and only when the player misses the timed press. On a good day a miss just re-prompts. Tasks with no timed press (Breakfast, Walk, Lunch Nudge, Fetch Post, Dinner) start the ladder when the owner does not respond to the first action, so on a bad day they always climb at least one rung. A hit on a bad day still completes the task, with a muted owner reaction. Rungs needed equal the owner's mood band within the bad day: Low 1, Very low 2, Lowest 3. The level's escalation depth caps the result. At the capped rung the owner always responds, so no ladder can dead-end. These bands are placeholders.    
+
+**A miss on a good day.** A good-day miss never starts a ladder and never uses rung actions. The same base action re-prompts instead:
+
+- **Timed tasks (Wake, Desk Break, Guard).** The owner gives the mild reaction written in the task's own flow (rolls over, turns back to the screen, an absent-minded pat). After a short delay the target glows again, the bubble shows the same picture, and the player repeats the same press (Jump, Paw, Bark). Guard is the one exception to the repeat: its marker stays only until the sound ends.
+- **Held Nudge (Breakfast, Lunch Nudge, Dinner).** Releasing the hold before the owner gets up counts as a miss. The owner stays put, and the same Nudge prompt returns.
+- **Fetch Post.** Releasing the pull early, or dropping the letter away from the owner, leaves the letter where it fell. The letter glows again and can be picked up again.
+- **Play.** A missed Catch does not re-prompt. The task still completes, only without the extra reaction.
+- **Walk and Bedtime.** No timing window and no hold, so a good day has no miss: the first click completes the task.
+
+Retries on a good day are unlimited and cost no Trust. A retry cap is an open question (see the end of this document).
 
 **What a rung pays.** A rung that lands pays a small Trust gain, smaller than a clean Complete, so nobody gains by missing on purpose. The task completes with a slower owner reaction and no bonus beat. Each rung has its own owner animation, so a deeper ladder shows the player more of the owner. Each rung costs 1 Energy. Energy at zero never blocks a rung; it only slows the dog and removes the timing bonus.
 
@@ -344,6 +354,8 @@ Easy adds two tasks and a first taste of escalation, and it is the first level w
 | 6 | Night | Sofa stop | None; the day ends at Bedtime | The owner is on the sofa with the TV on; the dog sits close and stays |
 | 7 | Night | Bedtime | Standard flow | Bad-day version at the edge of the bed |
 
+**A miss on a good day.** The Good day column shows a hit. A miss gets a mild owner reaction, then the same base action re-prompts, with no rung (see A miss on a good day, under Escalation ladders).  
+
 **Flows that are new here.** Play and Dinner run exactly as written in the task library. Dinner reuses the Breakfast flow but ends in the dining nook.
 
 **Rungs stop at 1.** Even at the Lowest mood band, Easy fires only Rung 1, and the owner always responds there.
@@ -377,6 +389,8 @@ Normal is the full intended day: eight tasks, up to two rungs on every task exce
 | 8 | Night | Kitchen stop | None; the day ends at Bedtime | The owner stands under the lamp; the dog sits against the owner's leg; water or a small bite |
 | 9 | Night | Sofa stop | None | The TV is on; the dog sits close and stays; optional throw tug |
 | 10 | Night | Bedtime | Standard flow | Bad-day version at the edge of the bed |
+
+**A miss on a good day.** The Good day column shows a hit. A miss gets a mild owner reaction, then the same base action re-prompts, with no rung (see A miss on a good day, under Escalation ladders).  
 
 **Guard floats.** Guard is an unpredictable event, so it can fire at any point after the Walk. The table shows where it usually lands. If it fires mid-task, it waits, because the world is locked during a task.
 
@@ -414,6 +428,8 @@ Hard is ten tasks, up to three rungs on every task except Bedtime, and a three-s
 | 11 | Night | Kitchen stop | None | The owner stands under the lamp; the dog sits against the leg; water or a small bite |
 | 12 | Night | Sofa stop | None | The TV is on; the dog sits close and stays; optional throw tug |
 | 13 | Night | Bedtime | Standard flow | Bad-day version at the edge of the bed |
+
+**A miss on a good day.** The Good day column shows a hit. A miss gets a mild owner reaction, then the same base action re-prompts, with no rung (see A miss on a good day, under Escalation ladders).  
 
 **Flows that are new here.** Fetch Post and Desk Break are written in the task library. After lunch the owner returns to the desk, which sets up Desk Break, and the letter sound at the door can arrive while the owner is at the desk or on the sofa.
 
@@ -473,8 +489,9 @@ Each task slot can later rotate between variants, so the player does not memoris
 3. Bad-day hits: today a hit on a bad day completes the task with a muted reaction and skips the ladder. Should a hit shorten the ladder instead, so skill still matters on bad days?
 4. Event frequency: one Floor and one Crying event on every bad day at every level, Easy included. Is that right for Easy, or should Easy get only one?
 5. Night stops: no ladders and no timing windows. Is the held Stay is the right action.
-7. Timing cue: a shrinking ring fits "no reflexes required" only if the target zone is generous. TBD the cue and how forgiving the zone should be.
-8. Clue system: he picture-only thought bubble, or choose the text window with a dog portrait.
+6. Timing cue: a shrinking ring fits "no reflexes required" only if the target zone is generous. TBD the cue and how forgiving the zone should be.
+7. Clue system: he picture-only thought bubble, or choose the text window with a dog portrait.
+8. Good-day retry cap: retries after a good-day miss are unlimited today. Should the owner get up alone after a set number of misses (for example 3), with the task counting as Partial?
 
 **Numbers to playtest**
 
@@ -482,6 +499,7 @@ Each task slot can later rotate between variants, so the player does not memoris
 - Energy costs per task and the rung cost of 1. Hard's worst case sits at 99 of 100, so it has almost no slack.
 - Trust sizes: a Complete versus a rung, and whether deeper rungs pay more.
 - The ring: shrink time and target-zone width.
+- The re-prompt delay after a good-day miss, and whether a good-day retry costs Energy.
 - How strongly the Floor and Crying events lean toward the night.
 - Whether three rungs on nine tasks is tedious or satisfying. I do not know; only playtesting answers it.
 - Whether a three-stop night feels long. Same caveat.
