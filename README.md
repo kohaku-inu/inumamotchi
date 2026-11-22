@@ -5,7 +5,7 @@
 A 2D isometric point-and-click game where the player is a dog taking care of its owner.
 This build is the core loop for assignment 4: one day (the Tutorial day plus a Play task), physics, and the code architecture.
 
-- [Play in the browser](https://kohaku-inu.itch.io/inumamotchi)
+- [Play on itch.io](https://kohaku-inu.itch.io/inumamotchi)
 - [Formal elements](Docs/formal-elements.md)
 - [Level design](Docs/level-design-four-difficulty-levels.md)
 - [All scripts](Assets/Scripts)
