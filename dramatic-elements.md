@@ -6,7 +6,7 @@ This document covers the dramatic elements of Inumamotchi (assignment 5). It bui
 
 - [Formal elements](formal-elements.md)
 - [Level design: four difficulty levels](level-design-four-difficulty-levels.md)
-- [Market research](Market_Research.md)
+- [Market research](market-research.md)
 - [Main README](../README.md)
 
 Numbers marked *(placeholder)* still need playtesting.
