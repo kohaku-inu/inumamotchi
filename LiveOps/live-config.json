@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "eventId": "winter_lights",
+  "eventStartUtc": "2026-12-04T00:00:00Z",
+  "eventEndUtc": "2026-12-13T23:59:59Z",
+  "eventTrustMultiplier": 2.0,
+  "eventDecorations": true,
+  "quietDayThreshold": 2
+}
