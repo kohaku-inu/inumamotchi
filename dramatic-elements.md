@@ -8,7 +8,7 @@ This document covers the dramatic elements of Inumamotchi (assignment 5). It bui
 - [Level design: four difficulty levels](level-design-four-difficulty-levels.md)
 - [Market research](market-research.md)
 - [Main README](../README.md)
-- [Story prototype (Twine)](https://kohaku-inu.itch.io/inumamotchi-story)
+- [Story prototype (Twine)](https://kohaku-inu.itch.io/inumamotchi-story) source under section 7.4
 
 Numbers marked *(placeholder)* still need playtesting.
 
@@ -358,7 +358,7 @@ Programming guideline: the plot is a set of `StoryBeat` assets (see §5.2). At D
 
 The Twine version is a short meta-game story over three days, with two variables: `$trust` (only rises) and `$drift` (neglect).
 
-- **Source:** [`/inumamotchi - Three Days.twee`](/Inumamotchi - Three Days.twee)
+- **Source:** [`/inumamotchi-story.twee`](/inumamotchi-story.twee)
 - **Playable HTML:** [Read on itch io]([export from Twine — see below](https://kohaku-inu.itch.io/inumamotchi-story))*
 
 
