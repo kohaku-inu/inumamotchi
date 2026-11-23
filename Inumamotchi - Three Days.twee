@@ -1,0 +1,205 @@
+:: StoryTitle
+Inumamotchi - Three Days
+
+
+:: StoryData
+{
+  "ifid": "9FEE85C5-DF66-4E63-A8A6-FA7D528AA6F4",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: Day1 Breakfast {"position":"525,25","size":"100,100"}
+The human fills your bowl, then pours a coffee and sits at the desk with it. No toast.
+
+Above the sofa there are pictures on the wall. Other humans, smiling.
+
+[[Sit under the pictures->Day1 Pictures]]
+[[Bring the leash->Day1 Walk]]
+
+
+:: Day1 Jump {"position":"275,25","size":"100,100"}
+(set: $trust to it + 1)\
+You land on the human's stomach. The human makes a noise like a squeaky toy, then laughs and rubs your ears.
+
+//Thought bubble: a gold medal.//
+
+[[Lead the way to the bowl->Day1 Breakfast]]
+
+
+:: Day1 Pictures {"position":"650,25","size":"100,100"}
+(set: $clues to it + 1)\
+You sit and stare up at the pictures. The human looks up too, for a long time.
+"They'd like you," the human says. You don't know who "they" are. A pack, somewhere else?
+
+//Thought bubble: many humans. Where?//
+
+[[Bring the leash->Day1 Walk]]
+
+
+:: Day1 Sunbeam {"position":"400,25","size":"100,100"}
+(set: $drift to it + 1)\
+The sunbeam is perfect. Much later the human gets up alone, slowly, and smile at you.
+
+//Thought bubble: the sun. Good choice. Probably.//
+
+[[Go to the bowl->Day1 Breakfast]]
+
+
+:: Day1 Wake {"position":"150,25","size":"100,100"}
+''Day 1 — morning''
+
+The human is a warm lump under the blanket. Breakfast is somewhere in the future, and the future is taking too long.
+
+[[Jump on the bed->Day1 Jump]]
+[[Lie in the sunbeam instead->Day1 Sunbeam]]
+
+
+:: Day1 Walk {"position":"775,25","size":"100,100"}
+The walk is short but there is a squirrel. You do not catch the squirrel. Nobody has ever caught the squirrel.
+
+The night came fast, the owner is getting ready to sleep. You settle on the bed. The owner get in next to you ,hugs you and saying "good night".
+
+[[Sleep->Day2 Start]]
+
+
+:: Day2 Bad Ignore {"position":"150,150","size":"100,100"}
+(set: $drift to it + 1)\
+The sunbeam is warm, but somehow less warm today. The human gets up in the afternoon.
+
+[[Later that day->Day2 Floor]]
+
+
+:: Day2 Bad Stay {"position":"25,150","size":"100,100"}
+(set: $trust to it + 1)\
+You climb up and lie down, back to back. You stay. You are very good at staying.
+
+After a while a hand finds your fur. The human gets up, slowly.
+
+//Thought bubble: a paw on a hand.//
+
+[[Later that day->Day2 Floor]]
+
+
+:: Day2 Bad Wake {"position":"1150,25","size":"100,100"}
+You whine at the bedside. Nothing.
+You tug the blanket. Nothing.
+
+[[Climb up and lie against the human->Day2 Bad Stay]]
+[[Give up and go to the sunbeam->Day2 Bad Ignore]]
+
+
+:: Day2 Comfort {"position":"400,150","size":"100,100"}
+(set: $trust to it + 1)\
+(if: $trust >= 3)[The human turns toward you at once and holds on. After a while they sit up and move to the sofa, with you.]
+(else:)[It takes a long time. Then the human turns toward you, and sits up.]
+
+There was no wrong choice. There was only being there.
+
+[[Sleep->Day3 Start]]
+
+
+:: Day2 Floor {"position":"275,150","size":"100,100"}
+In the evening the human is lying on the floor in the middle of the room. Not sleeping. Just lying there.
+
+You don't know what this game is. You know where you want to be.
+
+[[Lie down beside the human->Day2 Comfort]]
+[[Nudge the hand->Day2 Comfort]]
+[[Fetch the orange throw->Day2 Comfort]]
+
+
+:: Day2 Good {"position":"1025,25","size":"100,100"}
+(set: $trust to it + 1)\
+You put your chin on the bed. The human scratches it without looking away from the phone, then does look, and smiles.
+
+At midday a letter falls through the door.
+
+[[Bring the letter->Day2 Letter]]
+[[Leave it and chase the pigeon->Day2 Pigeon]]
+
+
+:: Day2 Letter {"position":"525,150","size":"100,100"}
+(set: $trust to it + 1)(set: $clues to it + 1)\
+You carry the letter in your mouth (only slightly wet) and drop it on the human's foot.
+The human reads the name on it, goes still, then opens it. The human smiles at the paper the way they smile at the pictures on the wall.
+
+[[Sleep->Day3 Start]]
+
+
+:: Day2 Pigeon {"position":"650,150","size":"100,100"}
+The pigeon is defeated. The pigeon comes back. The pigeon is never really defeated.
+The letter stays by the door all day.
+
+//Thought bubble: you, wearing a crown.//
+
+[[Sleep->Day3 Start]]
+
+
+:: Day2 Start {"position":"900,25","size":"100,100"}
+(set: $day to 2)\
+''Day 2 — morning''
+
+(if: $drift > 0)[The house feels quieter today. The blanket doesn't move.
+[[Try to wake the human->Day2 Bad Wake]]]
+(else:)[The human is already sitting up, looking at the phone.
+[[Say good morning->Day2 Good]]]
+
+
+:: Day3 Start {"position":"775,150","size":"100,100"}
+(set: $day to 3)\
+''Day 3''
+
+(if: $clues >= 2)[In the afternoon the human picks up the phone, looks at the pictures on the wall, and calls someone. You hear the human laugh, a real one. You don't understand any of the words. You understand the laugh.
+[[Evening->Ending Deep]]]
+(else-if: $drift >= 2)[The human stays at the desk until it is dark. The screen is the only light in the house.
+[[Lie down under the desk->Ending Quiet]]]
+(else:)[An ordinary day. Breakfast, a walk, the squirrel (still free), dinner.
+[[Evening->Ending Ordinary]]]
+
+
+:: Ending Deep {"position":"900,150","size":"100,100"}
+''A deep day''
+
+That night the human calls //you// to the bed, before you even ask.
+Trust: $trust
+
+Tomorrow there will be another day. Some will be hard. You'll be there for those too.
+
+[[Play again->Start]]
+
+
+:: Ending Ordinary {"position":"1150,150","size":"100,100"}
+''An ordinary day''
+
+The human falls asleep on the sofa with the TV on. You pull the orange throw over them. Mostly over them.
+Trust: $trust
+
+Tomorrow there will be another day.
+
+[[Play again->Start]]
+
+
+:: Ending Quiet {"position":"1025,150","size":"100,100"}
+''A quiet day''
+
+You lie on the human's feet under the desk. After a long time the hand comes down to your head, and the screen goes off.
+Trust: $trust
+
+Nothing is lost. Tomorrow you'll try again. Good dogs always do.
+
+[[Play again->Start]]
+
+
+:: Start {"position":"25,25","size":"100,100"}
+(set: $trust to 0)(set: $drift to 0)(set: $clues to 0)(set: $day to 1)\
+''Inumamotchi 犬守っち''
+//Every good boy knows how to take care of his human.//
+
+You are a dog. This house is the whole world.
+Your human is asleep. The sun is already on the floor.
+
+[[Start the day->Day1 Wake]]
