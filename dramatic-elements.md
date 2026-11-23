@@ -406,7 +406,12 @@ The strongest fit is **persistent progression + narrative unlocks**: the reason 
 
 ### 10.1 How it works
 
-The game loads a JSON configuration file from the GitHub repository at startup. Changing the JSON on GitHub changes the game for every player on their next launch — no new build, no new itch.io upload.
+The game loads a JSON configuration file from the GitHub repository at startup. Changing the JSON on GitHub changes the game for every player on their next launch — no new build, no new itch.io upload.        
+
+When changing to the eventStartUtc date so the current day is past it, the event will activate. the version number will change to keep track of changes in testing.
+
+This event is a winter event, the grader  should see a wreath decoration on the wall near the door, and in gameplay every point of trust is doubled. a full day with tasks completed will show trust:12.
+
 
 ```
 GitHub repo: LiveOps/live-config.json
