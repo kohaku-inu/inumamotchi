@@ -8,6 +8,7 @@ This document covers the dramatic elements of Inumamotchi (assignment 5). It bui
 - [Level design: four difficulty levels](level-design-four-difficulty-levels.md)
 - [Market research](market-research.md)
 - [Main README](../README.md)
+- [Story prototype (Twine)](https://kohaku-inu.itch.io/inumamotchi-story)
 
 Numbers marked *(placeholder)* still need playtesting.
 
@@ -353,14 +354,13 @@ Act 3 is not fixed to a day number: it is triggered by the owner-mood system, so
 
 Programming guideline: the plot is a set of `StoryBeat` assets (see §5.2). At Day Initialisation, `DayRunner` asks a `StoryDirector` for the first beat whose conditions are met (Trust ≥ X, days since last bad day, beats already seen), and places it in a free slot of the day.
 
-### 7.4 Twine prototype - NEED CHANGING
+### 7.4 Twine prototype
 
 The Twine version is a short meta-game story over three days, with two variables: `$trust` (only rises) and `$drift` (neglect).
 
-- **Source:** [`Twine/inumamotchi-story.twee`](../Twine/inumamotchi-story.twee)
-- **Playable HTML:** `Twine/inumamotchi-story.html` *(export from Twine — see below)*
+- **Source:** [`/inumamotchi - Three Days.twee`](/Inumamotchi - Three Days.twee)
+- **Playable HTML:** [Read on itch io]([export from Twine — see below](https://kohaku-inu.itch.io/inumamotchi-story))*
 
-To build the HTML: open [twinery.org](https://twinery.org) → **Library** → **Import** → choose the `.twee` file → open the story → **Build** → **Publish to File**. Commit the `.html` next to the `.twee`.
 
 ---
 
