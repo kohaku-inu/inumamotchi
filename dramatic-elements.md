@@ -630,5 +630,3 @@ public class LiveEventDecorations : MonoBehaviour
 
 Note: `raw.githubusercontent.com` caches files for a few minutes, so a change can take about 5 minutes to reach players.
 
-### 10.5 Integration in existing scripts
-
