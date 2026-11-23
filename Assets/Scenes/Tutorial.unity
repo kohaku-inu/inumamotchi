@@ -925,6 +925,7 @@ MonoBehaviour:
   scent: {fileID: 0}
   progress: {fileID: 11400000, guid: 816d4a78e977c584ebdee6157c92efd5, type: 2}
   trustReward: 1
+  liveConfig: {fileID: 11400000, guid: 8c980c09977eb1e499431a64ebaa99ce, type: 2}
 --- !u!4 &712287119
 Transform:
   m_ObjectHideFlags: 0
@@ -1281,6 +1282,7 @@ MonoBehaviour:
   scent: {fileID: 1189218488}
   progress: {fileID: 11400000, guid: 816d4a78e977c584ebdee6157c92efd5, type: 2}
   trustReward: 1
+  liveConfig: {fileID: 11400000, guid: 8c980c09977eb1e499431a64ebaa99ce, type: 2}
 --- !u!4 &997711073
 Transform:
   m_ObjectHideFlags: 0
@@ -1677,6 +1679,7 @@ MonoBehaviour:
   progress: {fileID: 11400000, guid: 816d4a78e977c584ebdee6157c92efd5, type: 2}
   nextSceneName: DayEnd
   quietDayThreshold: 2
+  liveConfig: {fileID: 11400000, guid: 8c980c09977eb1e499431a64ebaa99ce, type: 2}
   dogRested: {fileID: 11400000, guid: 62d2426299b1cb4408dea7ba3df67b35, type: 2}
 --- !u!4 &1143027650
 Transform:
@@ -1877,6 +1880,7 @@ MonoBehaviour:
   scent: {fileID: 0}
   progress: {fileID: 11400000, guid: 816d4a78e977c584ebdee6157c92efd5, type: 2}
   trustReward: 1
+  liveConfig: {fileID: 11400000, guid: 8c980c09977eb1e499431a64ebaa99ce, type: 2}
 --- !u!4 &1266039206
 Transform:
   m_ObjectHideFlags: 0
@@ -2007,6 +2011,38 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2202665617567414374, guid: 694a39072d5c4b24f978961fb520e492, type: 3}
   m_PrefabInstance: {fileID: 1340893990}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1395635227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1395635228}
+  m_Layer: 0
+  m_Name: Props
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1395635228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395635227}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2065584487}
+  m_Father: {fileID: 1661946985}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1427971894
 GameObject:
   m_ObjectHideFlags: 0
@@ -2418,6 +2454,101 @@ MonoBehaviour:
   standPoint: {fileID: 1958396909}
   alreadyHereDistance: 0.15
   highlight: {fileID: 143414383}
+--- !u!1 &1661946983
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1661946985}
+  - component: {fileID: 1661946984}
+  m_Layer: 0
+  m_Name: WinterDecorations
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1661946984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661946983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67c8aff456a41da4bbadec10de29e8dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LiveEventDecorations
+  liveConfig: {fileID: 11400000, guid: 8c980c09977eb1e499431a64ebaa99ce, type: 2}
+  eventId: winter_lights
+  decorationsRoot: {fileID: 1395635227}
+--- !u!4 &1661946985
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661946983}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.20927, y: 0.62236, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1395635228}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1832168765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1832168767}
+  - component: {fileID: 1832168766}
+  m_Layer: 0
+  m_Name: LiveOps
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1832168766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832168765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680e1675092c82e4096ec9e0780eb218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LiveConfigLoader
+  liveConfig: {fileID: 11400000, guid: 8c980c09977eb1e499431a64ebaa99ce, type: 2}
+  url: https://raw.githubusercontent.com/kohaku-inu/inumamotchi/refs/heads/main/LiveOps/live-config.json
+  timeoutSeconds: 5
+--- !u!4 &1832168767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832168765}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.20927, y: 0.62236, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1874774580
 GameObject:
   m_ObjectHideFlags: 0
@@ -2471,6 +2602,7 @@ MonoBehaviour:
   trustReward: 1
   goodCatchBonus: 1
   goodCatchSpeed: 1.5
+  liveConfig: {fileID: 11400000, guid: 8c980c09977eb1e499431a64ebaa99ce, type: 2}
 --- !u!1 &1944085981
 GameObject:
   m_ObjectHideFlags: 0
@@ -2750,6 +2882,7 @@ MonoBehaviour:
   scent: {fileID: 0}
   progress: {fileID: 11400000, guid: 816d4a78e977c584ebdee6157c92efd5, type: 2}
   trustReward: 1
+  liveConfig: {fileID: 11400000, guid: 8c980c09977eb1e499431a64ebaa99ce, type: 2}
 --- !u!4 &1982165832
 Transform:
   m_ObjectHideFlags: 0
@@ -2870,6 +3003,97 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2065584486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2065584487}
+  - component: {fileID: 2065584488}
+  m_Layer: 0
+  m_Name: Cozy winter evergreen wreath_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2065584487
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065584486}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0751599, y: 0.38637954, z: -0.036805503, w: 0.91853535}
+  m_LocalPosition: {x: 6.216, y: 1.029, z: -3.149}
+  m_LocalScale: {x: 0.06433182, y: 0.06433182, z: 0.06433182}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1395635228}
+  m_LocalEulerAnglesHint: {x: -6.294, y: 46.028, z: -7.265}
+--- !u!212 &2065584488
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065584486}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: -2035084133
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: -1704747791751686151, guid: 2aa7bd669210f3d4e819831b5833ef0b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12.88, y: 11.6}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
 --- !u!1001 &6869173406126095576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2948,3 +3172,5 @@ SceneRoots:
   - {fileID: 640476190}
   - {fileID: 1093544291}
   - {fileID: 629019442}
+  - {fileID: 1832168767}
+  - {fileID: 1661946985}

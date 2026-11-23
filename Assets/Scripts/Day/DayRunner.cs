@@ -13,6 +13,7 @@ public class DayRunner : MonoBehaviour
     [SerializeField] private string nextSceneName = "DayEnd";
     [Tooltip("This many ignored tasks or more makes the day Quiet")]
     [SerializeField] private int quietDayThreshold = 2;
+    [SerializeField] private LiveConfigAsset liveConfig;
     [Header("Listens to")]
     [SerializeField] private GameEvent dogRested;   // when the dog rests, the current task's moment passes
 
@@ -70,7 +71,8 @@ public class DayRunner : MonoBehaviour
     private void FinishDay()
     {
         Debug.Log("Day finished");
-        DayOutcome outcome = ignoredCount >= quietDayThreshold ? DayOutcome.Quiet : DayOutcome.Warm;
+        int threshold = liveConfig != null ? liveConfig.Current.quietDayThreshold : quietDayThreshold;
+        DayOutcome outcome = ignoredCount >= threshold ? DayOutcome.Quiet : DayOutcome.Warm;
         Debug.Log($"Day outcome: {outcome} (ignored {ignoredCount})");
 
         if (progress != null)

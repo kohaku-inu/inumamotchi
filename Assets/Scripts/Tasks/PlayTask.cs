@@ -17,6 +17,7 @@ public class PlayTask : GameTask
     [SerializeField] private int trustReward = 1;
     [SerializeField] private int goodCatchBonus = 1;
     [SerializeField] private float goodCatchSpeed = 1.5f;   // toy speed needed for the bonus
+    [SerializeField] private LiveConfigAsset liveConfig;
 
     private bool thrown;   // false = the dog still has to fetch it; true = it's been thrown
 
@@ -51,7 +52,7 @@ public class PlayTask : GameTask
         int reward = trustReward + (goodCatch ? goodCatchBonus : 0);
         Debug.Log($"Toy caught at speed {speed:F1} (good catch: {goodCatch}) -> +{reward} Trust");
 
-        if (progress != null) progress.AddTrust(reward);
+        if (progress != null) progress.AddTrust(Mathf.RoundToInt(reward * liveConfig.TrustMultiplier));
         Complete();
     }
 

@@ -16,6 +16,7 @@ public class HotspotTask : GameTask
     [Header("Progress")]
     [SerializeField] private GameProgress progress;
     [SerializeField] private int trustReward = 1;
+    [SerializeField] private LiveConfigAsset liveConfig;
 
     public override void Begin()
     {
@@ -47,7 +48,7 @@ public class HotspotTask : GameTask
         input.InputLocked = false;
 
         if (progress != null)
-            progress.AddTrust(trustReward);
+            progress.AddTrust(Mathf.RoundToInt(trustReward * liveConfig.TrustMultiplier));
 
         Complete();
     }
